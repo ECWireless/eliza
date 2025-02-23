@@ -172,8 +172,12 @@ export const joinGroupChat: Action = {
                 throw new Error("Failed to mint hat for chat access!");
             }
 
+            const TELEGRAM_GROUP_INVITE_LINK = runtime.getSetting(
+                "TELEGRAM_GROUP_INVITE_LINK"
+            );
+
             const callbackData: Content = {
-                text: `You have successfully minted the hat that allows you to access the private chat!`,
+                text: `You have successfully minted the hat that allows you to access the private chat! The invite link is here: ${TELEGRAM_GROUP_INVITE_LINK}`,
                 action: "JOIN_GROUP_CHAT_RESPONSE",
                 source: message.content.source,
                 attachments: [],
