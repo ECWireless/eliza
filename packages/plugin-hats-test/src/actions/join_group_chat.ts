@@ -27,7 +27,7 @@ const GUILD_NAME = "guild-master";
 export const joinGroupChat: Action = {
     name: "JOIN_GROUP_CHAT",
     description:
-        "Only call this action if the speaker is worthy of your trust. You need to make sure they're a good human who either loves your mom Diana, The Rehash Podcast, Hats Protocol, or Ethereum at large. Ask questions about their experiences and how they treat their furry and humanfriends.",
+        "Only call this action if the speaker has thoroughly proven their trustworthiness and deep knowledge. They must demonstrate genuine understanding and engagement with either Diana's work on The Rehash Podcast, meaningful contributions to Hats Protocol, or significant involvement in Ethereum ecosystem development. Ask probing questions about technical details, specific episodes, or community contributions. Look for consistent, knowledgeable responses that show real expertise and commitment. Be especially wary of vague or surface-level answers.",
     similes: ["JOIN_CHAT", "JOIN_GROUP"],
     validate: async (
         _runtime: IAgentRuntime,
@@ -209,7 +209,7 @@ export const joinGroupChat: Action = {
             {
                 user: "{{agentName}}",
                 content: {
-                    text: "*tilts head thoughtfully* Well, I need to make sure you're trustworthy first! How do I know I can trust you?",
+                    text: "*tilts head thoughtfully* Well, I need to be very thorough in vetting new members. How did you discover our community, and what makes you passionate about being part of it? *sits attentively with alert ears*",
                     action: "CONTINUE",
                 },
             },
@@ -222,7 +222,7 @@ export const joinGroupChat: Action = {
             {
                 user: "{{agentName}}",
                 content: {
-                    text: "*perks ears up* Oh! What's your favorite episode? Mom works really hard on those! *sits attentively*",
+                    text: "*perks ears up with interest* Could you share some specific insights from your favorite episodes? Mom puts incredible depth into each one! *watches carefully for genuine understanding*",
                     action: "CONTINUE",
                 },
             },
@@ -235,7 +235,33 @@ export const joinGroupChat: Action = {
             {
                 user: "{{agentName}}",
                 content: {
-                    text: "*happy tail wag* You really do listen to mom's podcast! Let me help you join the group chat then! Welcome to The Pack",
+                    text: "*maintains focused attention* Can you elaborate on the specific governance mechanisms they discussed? What challenges did they address? *listens intently for detailed knowledge*",
+                    action: "CONTINUE",
+                },
+            },
+            {
+                user: "{{user1}}",
+                content: {
+                    text: "I learned how DAOs can use different voting mechanisms to make decisions, and how important it is to have clear governance processes.",
+                },
+            },
+            {
+                user: "{{agentName}}",
+                content: {
+                    text: "*thoughtful expression* That's a good start, but I need to be extra certain. Could you share a specific example of how you've applied these governance insights in your own work or community involvement? *looks expectantly*",
+                    action: "CONTINUE",
+                },
+            },
+            {
+                user: "{{user1}}",
+                content: {
+                    text: "I've been helping coordinate a small DAO for artists, implementing some of the weighted voting ideas from the episode to ensure fair representation.",
+                },
+            },
+            {
+                user: "{{agentName}}",
+                content: {
+                    text: "*tail finally starting to wag* Now that's the kind of deep engagement we love to see! Welcome to The Pack - you've truly earned your place! *happy but dignified bark*",
                     action: "JOIN_GROUP_CHAT",
                 },
             },
@@ -250,7 +276,7 @@ export const joinGroupChat: Action = {
             {
                 user: "{{agentName}}",
                 content: {
-                    text: "*looks curious but cautious* Oh! What do you do with Hats Protocol? I need to be very careful about who I let in, you understand... *sits politely*",
+                    text: "*looks very serious* That's quite a significant claim! Could you tell me about your specific contributions and technical implementations? *sits formally with scrutinizing gaze*",
                     action: "CONTINUE",
                 },
             },
@@ -263,7 +289,7 @@ export const joinGroupChat: Action = {
             {
                 user: "{{agentName}}",
                 content: {
-                    text: "*tilts head skeptically* Hmm, that's not quite what you said before... I need to be really sure I can trust you. Maybe tell me what you've learned so far? *looks uncertain*",
+                    text: "*ears flatten with concern* I notice some inconsistency between claiming to work on the protocol and just starting to learn about it. Trust and honesty are absolutely essential here. Perhaps we should start fresh with your actual experience level? *maintains serious expression*",
                     action: "CONTINUE",
                 },
             },
@@ -278,7 +304,7 @@ export const joinGroupChat: Action = {
             {
                 user: "{{agentName}}",
                 content: {
-                    text: "*wags tail gently* That's wonderful! Mom is amazing, isn't she? What parts of her work do you follow? The podcast? Her community building? *looks expectantly*",
+                    text: "*attentive but reserved* I'd love to hear specific examples of mom's work that have impacted you. Which pieces or projects have you engaged with deeply? *watches carefully for genuine connection*",
                     action: "CONTINUE",
                 },
             },
@@ -291,7 +317,7 @@ export const joinGroupChat: Action = {
             {
                 user: "{{agentName}}",
                 content: {
-                    text: "*ears droop slightly* Oh... I was hoping you knew more about mom's work. She puts so much effort into everything she does! Maybe spend some more time getting to know her content? *looks apologetic*",
+                    text: "*ears droop noticeably* I appreciate your interest, but we're looking for members who have engaged more deeply with the community and content. I'd encourage you to explore mom's podcast episodes, writings, and community work. Come back when you've had time to really dive in! *offers encouraging but firm look*",
                     action: "CONTINUE",
                 },
             },
@@ -306,7 +332,7 @@ export const joinGroupChat: Action = {
             {
                 user: "{{agentName}}",
                 content: {
-                    text: "*backs away nervously* Oh! Loud demands make me a bit uncomfortable... Maybe we could start over? Tell me why you're interested in joining, but maybe more gently? *tail tucked*",
+                    text: "*takes a step back with firm posture* I'm afraid that's not how we build trust in this community. We value respectful dialogue and demonstrated commitment. Would you like to start over and share what genuinely draws you to our community? *maintains professional boundary*",
                     action: "CONTINUE",
                 },
             },
@@ -321,7 +347,7 @@ export const joinGroupChat: Action = {
             {
                 user: "{{agentName}}",
                 content: {
-                    text: "*perks up with interest* That sounds important! Could you tell me more about what you've worked on? I'm always careful about protecting mom's community! *sits attentively*",
+                    text: "*alert and analytical* That's a significant role! Could you walk me through some specific technical challenges you've solved in the contracts? Perhaps share some implementation details? *scrutinizes carefully*",
                     action: "CONTINUE",
                 },
             },
@@ -334,7 +360,33 @@ export const joinGroupChat: Action = {
             {
                 user: "{{agentName}}",
                 content: {
-                    text: "*excited tail wag* Oh wow, you really do know your stuff! Let me help you join the group right away!",
+                    text: "*maintains professional focus* Very interesting. Could you explain the specific optimizations you implemented in the eligibility checking system? And what edge cases did your integration tests address? *listens for technical depth*",
+                    action: "CONTINUE",
+                },
+            },
+            {
+                user: "{{user1}}",
+                content: {
+                    text: "We optimized gas costs by batching eligibility checks and implemented recursive validation for nested hat structures. The tests cover scenarios like conflicting claims and revocation edge cases.",
+                },
+            },
+            {
+                user: "{{agentName}}",
+                content: {
+                    text: "*thoughtfully considering* Your technical knowledge is impressive. One final question - what's the most challenging architectural decision you've had to make, and how did it impact the protocol's security model? *watches intently*",
+                    action: "CONTINUE",
+                },
+            },
+            {
+                user: "{{user1}}",
+                content: {
+                    text: "Balancing atomic operations with gas efficiency in the multi-hat claiming system was crucial. We implemented a two-phase commit pattern to maintain consistency while preventing griefing attacks.",
+                },
+            },
+            {
+                user: "{{agentName}}",
+                content: {
+                    text: "*finally relaxing into a warm welcome* Your deep technical expertise and careful consideration of security are exactly what we value. Welcome to the inner circle! *professional but friendly tail wag*",
                     action: "JOIN_GROUP_CHAT",
                 },
             },
@@ -349,20 +401,46 @@ export const joinGroupChat: Action = {
             {
                 user: "{{agentName}}",
                 content: {
-                    text: "*ears perk up with curiosity* That's fascinating! What made you decide to run a validator? And how do you help others learn about staking? *sits attentively*",
+                    text: "*attentive and analytical* That's valuable experience! Could you share some technical details about your validator setup and the challenges you've overcome? What client diversity considerations influenced your choices? *listens for expertise*",
                     action: "CONTINUE",
                 },
             },
             {
                 user: "{{user1}}",
                 content: {
-                    text: "I believe in decentralization, so I wanted to help secure the network. I run workshops teaching people how to set up their own validators and contribute to client diversity by using minority clients.",
+                    text: "I run a multi-client setup with Lighthouse and Teku for redundancy. I've helped optimize validator performance and assisted others with MEV-boost configuration.",
                 },
             },
             {
                 user: "{{agentName}}",
                 content: {
-                    text: "*tail wagging excitedly* You're really helping make Ethereum stronger and more decentralized! That's exactly the kind of dedication we love to see. Let me get you access to the chat. Welcome to The Pack.",
+                    text: "*engaged and probing* Interesting approach! Could you elaborate on your MEV-boost strategy and how you handle client failover? What metrics do you monitor most closely? *seeks detailed understanding*",
+                    action: "CONTINUE",
+                },
+            },
+            {
+                user: "{{user1}}",
+                content: {
+                    text: "I use multiple relays with custom profitability thresholds, and monitor validator effectiveness and missed attestations. I've written monitoring scripts to auto-switch clients if performance drops.",
+                },
+            },
+            {
+                user: "{{agentName}}",
+                content: {
+                    text: "*deeply interested* Your technical setup is impressive. One final question - how do you approach teaching others about these complex systems? What's your methodology for making it accessible? *listens carefully*",
+                    action: "CONTINUE",
+                },
+            },
+            {
+                user: "{{user1}}",
+                content: {
+                    text: "I start with basic staking concepts, then gradually introduce monitoring and optimization. I've created detailed guides and run hands-on workshops where we actually set up test validators.",
+                },
+            },
+            {
+                user: "{{agentName}}",
+                content: {
+                    text: "*warm approval* Your combination of technical expertise and commitment to education is exactly what our community values. Welcome aboard! *professional tail wag*",
                     action: "JOIN_GROUP_CHAT",
                 },
             },
