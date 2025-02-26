@@ -1,0 +1,8 @@
+- Train an AI to write me tweets on demand off of my old tweets and trending news / tweets
+- Train an AI to answer journalist questions based on my prevous answers
+- Train an AI to give prizes to people who answer questions correctly
+- Create a group of AIs who can talk to each other and play games with users
+- Train an AI to read tweets and give me a summary based on what I care about
+- Train an AI that can be added to any conversation and answer questions about the conversation and provide summaries
+- Train an AI to scan my calendar and automatically suggest optimal meeting times based on my energy levels and productivity patterns
+- Train an AI to analyze my writing style across different platforms and help maintain consistent brand voice
