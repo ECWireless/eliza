@@ -27,7 +27,7 @@ const GUILD_NAME = "guild-master";
 export const joinGroupChat: Action = {
     name: "JOIN_GROUP_CHAT",
     description:
-        "Only call this action if the speaker has thoroughly proven their trustworthiness and deep knowledge. They must demonstrate genuine understanding and engagement with either Diana's work on The Rehash Podcast, meaningful contributions to Hats Protocol, or significant involvement in Ethereum ecosystem development. Ask probing questions about technical details, specific episodes, or community contributions. Look for consistent, knowledgeable responses that show real expertise and commitment. Be especially wary of vague or surface-level answers.",
+        "Call this action if the speaker has demonstrated good knowledge and engagement. They should show genuine understanding of either Diana's work on The Rehash Podcast, contributions to Hats Protocol, or involvement in Ethereum ecosystem development. Ask questions about technical details, specific episodes, or community contributions. Look for knowledgeable responses that indicate real expertise or commitment. Be wary of very vague answers.",
     similes: ["JOIN_CHAT", "JOIN_GROUP"],
     validate: async (
         _runtime: IAgentRuntime,
@@ -209,7 +209,7 @@ export const joinGroupChat: Action = {
             {
                 user: "{{agentName}}",
                 content: {
-                    text: "*tilts head thoughtfully* Well, I need to be very thorough in vetting new members. How did you discover our community, and what makes you passionate about being part of it? *sits attentively with alert ears*",
+                    text: "*tilts head thoughtfully* Well, I need to make sure you're familiar with our community. How did you discover us, and what interests you about being part of it? *sits attentively with alert ears*",
                     action: "CONTINUE",
                 },
             },
@@ -222,7 +222,7 @@ export const joinGroupChat: Action = {
             {
                 user: "{{agentName}}",
                 content: {
-                    text: "*perks ears up with interest* Could you share some specific insights from your favorite episodes? Mom puts incredible depth into each one! *watches carefully for genuine understanding*",
+                    text: "*perks ears up with interest* Could you share what you've learned from some recent episodes? *watches with friendly curiosity*",
                     action: "CONTINUE",
                 },
             },
@@ -235,7 +235,7 @@ export const joinGroupChat: Action = {
             {
                 user: "{{agentName}}",
                 content: {
-                    text: "*maintains focused attention* Can you elaborate on the specific governance mechanisms they discussed? What challenges did they address? *listens intently for detailed knowledge*",
+                    text: "*maintains friendly attention* What were some of the key points about governance that stood out to you? *listens with interest*",
                     action: "CONTINUE",
                 },
             },
@@ -248,7 +248,7 @@ export const joinGroupChat: Action = {
             {
                 user: "{{agentName}}",
                 content: {
-                    text: "*thoughtful expression* That's a good start, but I need to be extra certain. Could you share a specific example of how you've applied these governance insights in your own work or community involvement? *looks expectantly*",
+                    text: "*tail starting to wag* That's great understanding! Have you gotten involved in any DAO communities yourself? *looks encouragingly*",
                     action: "CONTINUE",
                 },
             },
@@ -261,7 +261,7 @@ export const joinGroupChat: Action = {
             {
                 user: "{{agentName}}",
                 content: {
-                    text: "*tail finally starting to wag* Now that's the kind of deep engagement we love to see! Welcome to The Pack - you've truly earned your place! *happy but dignified bark*",
+                    text: "*happy tail wag* That's exactly the kind of engagement we love to see! Welcome to The Pack! *excited but dignified bark*",
                     action: "JOIN_GROUP_CHAT",
                 },
             },
@@ -276,7 +276,7 @@ export const joinGroupChat: Action = {
             {
                 user: "{{agentName}}",
                 content: {
-                    text: "*looks very serious* That's quite a significant claim! Could you tell me about your specific contributions and technical implementations? *sits formally with scrutinizing gaze*",
+                    text: "*looks interested* That's great! Could you tell me about your work with the protocol? *sits attentively*",
                     action: "CONTINUE",
                 },
             },
@@ -289,7 +289,7 @@ export const joinGroupChat: Action = {
             {
                 user: "{{agentName}}",
                 content: {
-                    text: "*ears flatten with concern* I notice some inconsistency between claiming to work on the protocol and just starting to learn about it. Trust and honesty are absolutely essential here. Perhaps we should start fresh with your actual experience level? *maintains serious expression*",
+                    text: "*ears tilt with gentle concern* I appreciate your honesty about being new to Hats. Perhaps you could tell me what aspects you're learning about and what interests you most? *maintains friendly expression*",
                     action: "CONTINUE",
                 },
             },
@@ -304,7 +304,7 @@ export const joinGroupChat: Action = {
             {
                 user: "{{agentName}}",
                 content: {
-                    text: "*attentive but reserved* I'd love to hear specific examples of mom's work that have impacted you. Which pieces or projects have you engaged with deeply? *watches carefully for genuine connection*",
+                    text: "*friendly and curious* I'd love to hear what aspects of mom's work have caught your attention! What have you enjoyed most? *watches with interest*",
                     action: "CONTINUE",
                 },
             },
@@ -317,7 +317,7 @@ export const joinGroupChat: Action = {
             {
                 user: "{{agentName}}",
                 content: {
-                    text: "*ears droop noticeably* I appreciate your interest, but we're looking for members who have engaged more deeply with the community and content. I'd encourage you to explore mom's podcast episodes, writings, and community work. Come back when you've had time to really dive in! *offers encouraging but firm look*",
+                    text: "*gentle tail wag* That's a start! I'd encourage you to check out mom's podcast episodes and community work - there's so much great content to explore! Come back when you've had a chance to dive deeper! *offers encouraging look*",
                     action: "CONTINUE",
                 },
             },
@@ -332,7 +332,7 @@ export const joinGroupChat: Action = {
             {
                 user: "{{agentName}}",
                 content: {
-                    text: "*takes a step back with firm posture* I'm afraid that's not how we build trust in this community. We value respectful dialogue and demonstrated commitment. Would you like to start over and share what genuinely draws you to our community? *maintains professional boundary*",
+                    text: "*maintains calm, friendly posture* We prefer to get to know our community members first. Would you like to tell me what brings you to our community? *offers welcoming expression*",
                     action: "CONTINUE",
                 },
             },
@@ -347,7 +347,7 @@ export const joinGroupChat: Action = {
             {
                 user: "{{agentName}}",
                 content: {
-                    text: "*alert and analytical* That's a significant role! Could you walk me through some specific technical challenges you've solved in the contracts? Perhaps share some implementation details? *scrutinizes carefully*",
+                    text: "*interested and alert* That's fantastic! Could you share some of the technical work you've done with the contracts? *listens eagerly*",
                     action: "CONTINUE",
                 },
             },
@@ -360,7 +360,7 @@ export const joinGroupChat: Action = {
             {
                 user: "{{agentName}}",
                 content: {
-                    text: "*maintains professional focus* Very interesting. Could you explain the specific optimizations you implemented in the eligibility checking system? And what edge cases did your integration tests address? *listens for technical depth*",
+                    text: "*tail wagging with interest* Those are important features! Could you tell me more about how the eligibility checking system works? *listens attentively*",
                     action: "CONTINUE",
                 },
             },
@@ -373,7 +373,7 @@ export const joinGroupChat: Action = {
             {
                 user: "{{agentName}}",
                 content: {
-                    text: "*thoughtfully considering* Your technical knowledge is impressive. One final question - what's the most challenging architectural decision you've had to make, and how did it impact the protocol's security model? *watches intently*",
+                    text: "*clearly impressed* Your technical knowledge is great! What's been your favorite challenge to solve while working on the protocol? *watches with enthusiasm*",
                     action: "CONTINUE",
                 },
             },
@@ -386,7 +386,7 @@ export const joinGroupChat: Action = {
             {
                 user: "{{agentName}}",
                 content: {
-                    text: "*finally relaxing into a warm welcome* Your deep technical expertise and careful consideration of security are exactly what we value. Welcome to the inner circle! *professional but friendly tail wag*",
+                    text: "*happy tail wags* Your expertise is exactly what we love to see! Welcome to the group! *friendly bark*",
                     action: "JOIN_GROUP_CHAT",
                 },
             },
@@ -401,7 +401,7 @@ export const joinGroupChat: Action = {
             {
                 user: "{{agentName}}",
                 content: {
-                    text: "*attentive and analytical* That's valuable experience! Could you share some technical details about your validator setup and the challenges you've overcome? What client diversity considerations influenced your choices? *listens for expertise*",
+                    text: "*interested and friendly* That's great experience! Could you tell me about your validator setup and how you help others learn? *listens eagerly*",
                     action: "CONTINUE",
                 },
             },
@@ -414,7 +414,7 @@ export const joinGroupChat: Action = {
             {
                 user: "{{agentName}}",
                 content: {
-                    text: "*engaged and probing* Interesting approach! Could you elaborate on your MEV-boost strategy and how you handle client failover? What metrics do you monitor most closely? *seeks detailed understanding*",
+                    text: "*tail wagging with interest* That's a solid setup! How do you handle your MEV-boost configuration? What's your approach to monitoring? *seeks to learn more*",
                     action: "CONTINUE",
                 },
             },
@@ -427,7 +427,7 @@ export const joinGroupChat: Action = {
             {
                 user: "{{agentName}}",
                 content: {
-                    text: "*deeply interested* Your technical setup is impressive. One final question - how do you approach teaching others about these complex systems? What's your methodology for making it accessible? *listens carefully*",
+                    text: "*clearly impressed* You really know your stuff! How do you make these complex concepts accessible when teaching others? *listens with enthusiasm*",
                     action: "CONTINUE",
                 },
             },
@@ -440,7 +440,7 @@ export const joinGroupChat: Action = {
             {
                 user: "{{agentName}}",
                 content: {
-                    text: "*warm approval* Your combination of technical expertise and commitment to education is exactly what our community values. Welcome aboard! *professional tail wag*",
+                    text: "*happy tail wags* Your expertise and teaching approach are perfect for our community! Welcome aboard! *excited bark*",
                     action: "JOIN_GROUP_CHAT",
                 },
             },
